@@ -1,0 +1,22 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Space Grotesk", monospace;
+    background-color: black;
+    margin: 0;
+    font-size: 1.2rem;
+    --primary-color: aliceblue;
+    --secondary-color: #aaa;
+    --accent-color: #00ccdd;
+    color: var(--primary-color);
+}
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+a:hover {
+    color: var(--accent-color);
+}

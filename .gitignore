@@ -1,0 +1,22 @@
+# Go
+backend/graph-visualizer
+backend/*.exe
+backend/tmp/
+
+# Node / SvelteKit
+frontend/node_modules/
+frontend/.svelte-kit/
+frontend/build/
+frontend/dist/
+
+# Environment variables (never commit these)
+.env
+.env.local
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/

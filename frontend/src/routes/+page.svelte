@@ -172,7 +172,8 @@
     text-align: center;
     color: var(--accent-color);
     font-size: 2rem;
-    background-color: rgaba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--secondary-color);
   }
   .layout {
     display: flex;

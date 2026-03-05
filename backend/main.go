@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 	"net/http"
-
+	"log"
+	
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/cors"
@@ -25,5 +26,7 @@ func main() {
 	r.Post("/api/dijkstra", handlers.Dijkstra)
 
 	fmt.Println("backend running on :8080")
-	http.ListenAndServe(":8080", r)
+		if err := http.ListenAndServe(":8080", r); err != nil {
+		log.Fatal(err)
+	}
 }

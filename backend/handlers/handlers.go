@@ -37,13 +37,21 @@ func DFS(w http.ResponseWriter, r *http.Request) {
 }
 
 func Dijkstra(w http.ResponseWriter, r *http.Request) {
-	req, err := decode(r)
-	if err != nil {
-		http.Error(w, "invalid request", http.StatusBadRequest)
-		return
-	}
-	steps := graph.DijkstraSteps(req.Graph, req.Start)
-	encode(w, AlgoResponse{Steps: steps})
+    req, err := decode(r)
+    if err != nil {
+        http.Error(w, "invalid request", http.StatusBadRequest)
+        return
+    }
+    found := false
+    for _, n := range req.Graph.Nodes {
+        if n == req.Start { found = true; break }
+    }
+    if !found {
+        http.Error(w, "start node not in graph", http.StatusBadRequest)
+        return
+    }
+    steps := graph.DijkstraSteps(req.Graph, req.Start)
+    encode(w, AlgoResponse{Steps: steps})
 }
 
 func decode(r *http.Request) (AlgoRequest, error) {

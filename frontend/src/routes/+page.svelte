@@ -62,7 +62,7 @@
 
   async function runAlgorithm() {
     if (nodes.length === 0 || !startNode) return;
-    const res = await fetch(`http://localhost:8080/api/${selectedAlgo}`, {
+      const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/${selectedAlgo}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

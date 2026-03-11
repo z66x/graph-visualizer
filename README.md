@@ -1,7 +1,7 @@
 # Graph Algorithm Visualiser
 
 > Step-by-step visualisation of BFS, DFS, and Dijkstra — built with Go + SvelteKit
-
+🔗 **[Live Demo](https://graph-visualizer-zwix.vercel.app)**
 ![Graph Algorithm Visualiser](screenshot.png)
 
 ---
